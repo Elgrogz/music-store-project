@@ -9,5 +9,14 @@ artist1 = Artist.new ({
 
 artist1.save
 
+album1 = Album.new ({
+  'title' => 'Blood Sugar Sex Magick',
+  'genre' => 'Funk',
+  'quantity' => 50,
+  'artist_id' => artist1.id
+  })
+
+album1.save
+
 binding.pry
 nil
