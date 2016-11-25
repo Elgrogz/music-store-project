@@ -24,6 +24,12 @@ class Artist
     result = SqlRunner.run(sql)
   end
 
+  def update
+    sql = "UPDATE artist 
+          SET (name) 
+          VALUES ('#{@name});"
+  end
+
   def self.all
     sql = "SELECT * FROM artists;"
     results = SqlRunner.run(sql)

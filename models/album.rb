@@ -28,6 +28,11 @@ class Album
   end
 
   def update
+    sql = "UPDATE albums 
+          SET (title, genre, quantity)
+          VALUES ('#{@title}', '#{@genre}', #{@quantity});"
+    result = SqlRunner.run(sql)
+  end
 
   def self.all
     sql = "SELECT * FROM albums;"
@@ -37,7 +42,7 @@ class Album
 
   def self.delete_all
     sql = "DELETE FROM albums;"
-    RESULTS = SqlRunner.run(sql)
+    results = SqlRunner.run(sql)
   end
 
   def get_name
