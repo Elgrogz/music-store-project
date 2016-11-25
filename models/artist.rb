@@ -1,4 +1,4 @@
-require_relative('/db/sql_runner')
+require_relative('../db/sql_runner')
 
 class Artist
 
@@ -8,5 +8,14 @@ class Artist
   def initialize(options)
     @id = nil || options['id'].to_i
     @name = options['name'] 
+  end
+
+  def save
+    sql = "INSERT INTO artists 
+          (name) 
+          VALUES ('#{@name}')
+          RETURNING *;"
+    results = SqlRunner.run(sql)
+    @id = results[0]['id'].to_i
   end
 end
