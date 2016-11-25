@@ -9,6 +9,12 @@ artist1 = Artist.new ({
 
 artist1.save
 
+artist2 = Artist.new ({
+  'name' => 'Arctic Monkeys'
+  })
+
+artist2.save
+
 album1 = Album.new ({
   'title' => 'Blood Sugar Sex Magick',
   'genre' => 'Funk',
