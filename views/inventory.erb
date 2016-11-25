@@ -7,14 +7,16 @@
     <th>Genre</th>
     <th>Quantity</th>
   </tr>
-  <tr>
     <% for album in @albums %>
-   
+    <tr>
+    <td><%= album.get_name %></td>
     <td><%= album.title %></td>
     <td><%= album.genre %></td>
     <td><%= album.quantity %></td>
+    </tr>
+    </table>
+    </hr>
     <% end %>
 
-  </tr>
 
 </table>
