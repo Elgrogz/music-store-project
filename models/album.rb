@@ -22,10 +22,22 @@ class Album
     @id = results[0]['id'].to_i
   end
 
+  def delete
+    sql = "DELETE FROM albums WHERE id = #{@id};"
+    result = SqlRunner.run(sql)
+  end
+
+  def update
+
   def self.all
     sql = "SELECT * FROM albums;"
     results = SqlRunner.run(sql)
     return results.map {|album| Album.new(album)}
+  end
+
+  def self.delete_all
+    sql = "DELETE FROM albums;"
+    RESULTS = SqlRunner.run(sql)
   end
 
   def get_name
