@@ -32,7 +32,7 @@ end
 get '/artists/new' do
   erb(:"artist/new")
 end
-
+  
 post '/artists' do
   @artist = Artist.new(params)
   @artist.save
