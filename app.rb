@@ -24,7 +24,7 @@ get '/artists/:id' do
   erb(:"artist/artist")
 end
 
-get '/artists/new' do
+get '/artists/artist/new' do
   erb(:"artist/new")
 end
 

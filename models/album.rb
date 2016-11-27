@@ -9,7 +9,7 @@ class Album
     @id = nil || options['id'].to_i
     @title = options['title'] 
     @genre = options['genre'] 
-    @quantity = options['quantity'].to_i 
+    @quantity = nil || options['quantity'].to_i 
     @artist_id = options['artist_id'].to_i 
     @album_url = nil || options['album_url']
   end
