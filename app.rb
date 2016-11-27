@@ -49,6 +49,11 @@ get '/albums/:id' do
   erb(:"album/album")
 end
 
+post '/albums/:id/delete' do
+  Album.destroy(params[:id])
+  redirect to ('/albums')
+end
+
 get '/albums/new' do
   erb(:"album/new")
 end

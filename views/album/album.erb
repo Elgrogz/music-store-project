@@ -3,3 +3,7 @@
 <p>Album artist: <%= @album.get_name %></p>
 <p>Album genre: <%= @album.genre %></p>
 <p>Album quantity: <%= @album.quantity %></p>
+
+<form action="/albums/<%= @album.id %>/delete" method="post">
+  <input type="submit" value="Delete Album">
+</form>
