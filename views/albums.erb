@@ -1,0 +1,8 @@
+<h1>Artist List</h1>
+<% for album in @albums %>
+<p>Album title: <%= album.title %></p>
+<p>Album artist: <%= album.get_name %></p>
+<p>Album genre: <%= album.genre %></p>
+<p>Album quantity: <%= album.quantity %></p>
+<p><a href="/albums/<%= album.id %>">Show album</a></p>
+<% end %>

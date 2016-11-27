@@ -2,13 +2,13 @@ require_relative('../db/sql_runner')
 
 class Artist
 
-  attr_accessor :name, :artist_url
+  attr_accessor :name
   attr_reader :id
 
   def initialize(options)
     @id = nil || options['id'].to_i
     @name = options['name']
-    @artist_url = nil || options['artist_url']
+    # @artist_url = nil || options['artist_url']
   end
 
   def save
@@ -29,6 +29,13 @@ class Artist
     sql = "UPDATE artist 
           SET (name) 
           VALUES ('#{@name});"
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM artists WHERE id = #{id};"
+    artist = SqlRunner.run(sql)
+    result = Artist.new(artist.first)
+    return result
   end
 
   def self.all
