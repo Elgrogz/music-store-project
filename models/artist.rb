@@ -8,7 +8,7 @@ class Artist
   def initialize(options)
     @id = nil || options['id'].to_i
     @name = options['name']
-    # @artist_url = nil || options['artist_url']
+    @artist_url = nil || options['artist_url']
   end
 
   def save
@@ -18,11 +18,6 @@ class Artist
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
-  end
-
-  def delete
-    sql = "DELETE FROM artists WHERE id = #{@id};"
-    result = SqlRunner.run(sql)
   end
 
   def self.update
@@ -37,6 +32,11 @@ class Artist
     artist = SqlRunner.run(sql)
     result = Artist.new(artist.first)
     return result
+  end
+
+  def self.destroy(id)
+    sql = "DELETE FROM artists WHERE id = #{id};"
+    result = SqlRunner.run(sql)
   end
 
   def self.all

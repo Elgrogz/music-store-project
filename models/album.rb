@@ -23,11 +23,6 @@ class Album
     @id = results[0]['id'].to_i
   end
 
-  def delete
-    sql = "DELETE FROM albums WHERE id = #{@id};"
-    result = SqlRunner.run(sql)
-  end
-
   def self.update
     sql = "UPDATE albums 
           SET title = '#{options['title']}',
@@ -42,6 +37,11 @@ class Album
     album = SqlRunner.run(sql)
     result = Album.new(album.first)
     return result
+  end
+
+  def self.delete(id)
+    sql = "DELETE FROM albums WHERE id = #{id};"
+    result = SqlRunner.run(sql)
   end
 
   def self.all

@@ -24,13 +24,18 @@ get '/artists/:id' do
   erb(:"artist/artist")
 end
 
-get '/artists/artist/new' do
+post '/artists/:id/delete' do
+  Artist.destroy(params[:id])
+  redirect to ('/artists')
+end
+
+get '/artists/new' do
   erb(:"artist/new")
 end
 
 post '/artists' do
-  artist = Artist.new(params)
-  artist.save
+  @artist = Artist.new(params)
+  @artist.save
   redirect to ('/inventory')
 end
 
@@ -45,12 +50,11 @@ get '/albums/:id' do
 end
 
 get '/albums/new' do
-  @artists = Artist.all
   erb(:"album/new")
 end
 
 post '/albums' do
-  album = Albums.new(params)
-  album.save
+  @album = Albums.new(params)
+  @album.save
   redirect to ('/inventory')
 end
