@@ -24,12 +24,32 @@ get '/artists/:id' do
   erb(:artist)
 end
 
+get '/artists/new' do
+  erb(:new)
+end
+
+post '/artists' do
+  artist = Artist.new(params)
+  artist.save
+  redirect to ('/artists')
+end
+
 get '/albums' do
   @albums = Album.all
   erb(:albums)
 end
 
 get '/albums/:id' do
-  @album = Album.find(params[:id])
+  @album  = Album.find(params[:id])
   erb(:album)
+end
+
+get '/albums/new' do
+  erb(:new)
+end
+
+post '/albums' do
+  album = Albums.new(params)
+  album.save
+  redirect to ('/albums')
 end
