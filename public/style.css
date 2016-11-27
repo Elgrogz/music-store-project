@@ -1,3 +1,17 @@
 body {
   background-color: MediumAquamarine;
+  font-family: 'Bungee Shade', cursive;
+}
+
+nav {
+  display: inline-block;
+  font-family: 'Bungee', cursive;
+}
+
+tr {
+  font-family: 'Bungee', cursive;
+}
+
+p {
+  font-family: 'Bungee', cursive;
 }
