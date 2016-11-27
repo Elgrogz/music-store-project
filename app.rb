@@ -16,16 +16,16 @@ end
 
 get '/artists' do
   @artists = Artist.all
-  erb(:artists)
+  erb(:"artist/artists")
 end
 
 get '/artists/:id' do
   @artist = Artist.find(params[:id])
-  erb(:artist)
+  erb(:"artist/artist")
 end
 
 get '/artists/new' do
-  erb(:new)
+  erb(:"artist/new")
 end
 
 post '/artists' do
@@ -36,16 +36,16 @@ end
 
 get '/albums' do
   @albums = Album.all
-  erb(:albums)
+  erb(:"album/albums")
 end
 
 get '/albums/:id' do
   @album  = Album.find(params[:id])
-  erb(:album)
+  erb(:"album/album")
 end
 
 get '/albums/new' do
-  erb(:new)
+  erb(:"album/new")
 end
 
 post '/albums' do
