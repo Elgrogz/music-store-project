@@ -19,12 +19,17 @@ get '/artists' do
   erb(:artists)
 end
 
+get '/artists/:id' do
+  @artist = Artist.find(params[:id])
+  erb(:artist)
+end
+
 get '/albums' do
   @albums = Album.all
   erb(:albums)
 end
 
-get '/artists/:id' do
-  @artist = Artist.find(params[:id])
-  erb(:artist)
+get '/albums/:id' do
+  @album = Album.find(params[:id])
+  erb(:album)
 end
