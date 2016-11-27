@@ -28,10 +28,12 @@ class Album
     result = SqlRunner.run(sql)
   end
 
-  def update
+  def self.update
     sql = "UPDATE albums 
-          SET (title, genre, quantity)
-          VALUES ('#{@title}', '#{@genre}', #{@quantity});"
+          SET title = '#{options['title']}',
+          genre = '#{options['genre']}',
+          quantity = '#{options['quantity']}'
+          WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
   end
 

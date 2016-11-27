@@ -31,7 +31,7 @@ end
 post '/artists' do
   artist = Artist.new(params)
   artist.save
-  redirect to ('/artists')
+  redirect to ('/inventory')
 end
 
 get '/albums' do
@@ -52,5 +52,5 @@ end
 post '/albums' do
   album = Albums.new(params)
   album.save
-  redirect to ('/albums')
+  redirect to ('/inventory')
 end

@@ -5,15 +5,17 @@
         <th>Album Name</th>
         <th>Genre</th>
         <th>Quantity</th>
+        <th>Options</th>
     </tr>
-    <% for album in @albums %>
+        <% for album in @albums %>
     <tr>
         <td><%= album.get_name %></td>
         <td><%= album.title %></td>
         <td><%= album.genre %></td>
         <td><%= album.quantity %></td>
+
     </tr>
-<% end %>
+        <% end %>
 </table>
 
 

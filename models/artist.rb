@@ -25,10 +25,11 @@ class Artist
     result = SqlRunner.run(sql)
   end
 
-  def update
-    sql = "UPDATE artist 
-          SET (name) 
-          VALUES ('#{@name});"
+  def self.update
+    sql = "UPDATE artists 
+          SET name = '#{options['name']}'
+          WHERE id = '#{options['id']};"
+    result = SqlRunner.run(sql)
   end
 
   def self.find(id)
