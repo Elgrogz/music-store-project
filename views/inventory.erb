@@ -1,23 +1,21 @@
-<!-- <h1>Inventory</h1> -->
+
 
 <table>
-<th>Inventory</th>
-  <tr>
-    <th>Artist Name</th>
-    <th>Album Name</th>
-    <th>Genre</th>
-    <th>Quantity</th>
-  </tr>
+    <th>Inventory</th>
+    <tr>
+        <th>Artist Name</th>
+        <th>Album Name</th>
+        <th>Genre</th>
+        <th>Quantity</th>
+    </tr>
     <% for album in @albums %>
     <tr>
-    <td><%= album.get_name %></td>
-    <td><%= album.title %></td>
-    <td><%= album.genre %></td>
-    <td><%= album.quantity %></td>
+        <td><%= album.get_name %></td>
+        <td><%= album.title %></td>
+        <td><%= album.genre %></td>
+        <td><%= album.quantity %></td>
     </tr>
-    </hr>
-    <% end %>
-    </table>
-
-
+<% end %>
 </table>
+
+

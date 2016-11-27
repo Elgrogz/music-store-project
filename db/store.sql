@@ -3,7 +3,8 @@ DROP TABLE artists;
 
 CREATE TABLE artists (
   id SERIAL8 primary key,
-  name VARCHAR(255)
+  name VARCHAR(255),
+  artist_url VARCHAR(255)
   );
 
 CREATE TABLE albums (
@@ -11,6 +12,7 @@ CREATE TABLE albums (
   title VARCHAR(255),
   genre VARCHAR(255),
   quantity INT4,
-  artist_id INT8 references artists(id)
+  artist_id INT8 references artists(id),
+  album_url VARCHAR(255)
 );
 

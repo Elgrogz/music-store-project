@@ -13,3 +13,8 @@ get '/inventory' do
   @albums = Album.all
   erb(:inventory)
 end
+
+get '/artists' do
+  @artists = Artist.all
+  erb(:artists)
+end

@@ -2,12 +2,13 @@ require_relative('../db/sql_runner')
 
 class Artist
 
-  attr_accessor :name
+  attr_accessor :name, :artist_url
   attr_reader :id
 
   def initialize(options)
     @id = nil || options['id'].to_i
-    @name = options['name'] 
+    @name = options['name']
+    @artist_url = nil || options['artist_url']
   end
 
   def save
