@@ -4,6 +4,10 @@
 <p>Album genre: <%= @album.genre %></p>
 <p>Album quantity: <%= @album.quantity %></p>
 
+<form action="/albums/<%= @album.id %>/edit" method="get">
+  <input type="submit" value="Edit Album">
+</form>
+
 <form action="/albums/<%= @album.id %>/delete" method="post">
   <input type="submit" value="Delete Album">
 </form>
