@@ -11,6 +11,7 @@ end
 
 get '/inventory' do
   @albums = Album.all
+  @artists = Artist.all
   erb(:inventory)
 end
 
