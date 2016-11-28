@@ -20,10 +20,10 @@ class Artist
     @id = results[0]['id'].to_i
   end
 
-  def self.update
+  def self.update(options)
     sql = "UPDATE artists 
           SET name = '#{options['name']}'
-          WHERE id = '#{options['id']};"
+          WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
   end
 
