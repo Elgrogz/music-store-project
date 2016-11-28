@@ -23,7 +23,7 @@ class Album
     @id = results[0]['id'].to_i
   end
 
-  def self.update
+  def self.update(options)
     sql = "UPDATE albums 
           SET title = '#{options['title']}',
           genre = '#{options['genre']}',

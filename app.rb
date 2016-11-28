@@ -76,6 +76,7 @@ post '/albums' do
 end
 
 get '/albums/:id/edit' do
+  @artists = Artist.all
   @album = Album.find(params[:id])
   erb(:"album/edit")
 end
