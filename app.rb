@@ -39,6 +39,16 @@ post '/artists' do
   redirect to ('/inventory')
 end
 
+get '/artists/:id/edit' do
+  @artist = Artist.find(params[:id])
+  erb(:"artist/edit")
+end
+
+post '/artists/:id' do
+  Artist.update(params)
+  redirect to '/artists/#{params[:id]}'
+end
+
 get '/albums' do
   @albums = Album.all
   erb(:"album/albums")
@@ -63,4 +73,14 @@ post '/albums' do
   @album = Album.new(params)
   @album.save
   redirect to ('/inventory')
+end
+
+get '/albums/:id/edit' do
+  @album = Album.find(params[:id])
+  erb(:"album/edit")
+end
+
+post '/albums/:id' do
+  Album.update(params)
+  redirect to '/albums/#{params[:id]}'
 end
