@@ -1,26 +1,26 @@
 <h1>Inventory</h1>
 
 <p>Add items to stock:
-    <form>
+    <form action="/albums" method="post">
     <label>Artist:
-      <select name="id">
+      <select name="artist.id">
         <% for artist in @artists %>
-        <option value="<%= id %>"><%= name %></option> 
+        <option value="<%= artist.id %>"><%= artist.name %></option> 
         <% end %>
       </select>
     </label>
 
     <label>Album:
-      <select name="id">
+      <select name="album.id">
         <% for album in @albums %>
-        <option value="<%= id %>"><%= title %></option> 
+        <option value="<%= album.id %>"><%= album.title %></option> 
         <% end %>
       </select>
     </label>
 
     <label>
       Quantity:
-      <input type="number" name="quantity" value="<%= @album.quantity %>"/>
+      <input type="number" name="quantity" value="<%= album.quantity %>"/>
     </label>
 
     <input type="submit" value="Add items"/>
