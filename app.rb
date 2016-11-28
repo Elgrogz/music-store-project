@@ -81,10 +81,6 @@ post '/albums' do
   redirect to ('/inventory')
 end
 
-get 'albums/:id/delete' do
-  erb(:delete)
-end
-
 get '/albums/:id/edit' do
   @artists = Artist.all
   @album = Album.find(params[:id])
