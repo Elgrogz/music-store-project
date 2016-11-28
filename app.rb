@@ -46,7 +46,7 @@ end
 
 post '/artists/:id' do
   Artist.update(params)
-  redirect to '/artists'
+  redirect to ('/artists')
 end
 
 get '/albums' do
@@ -83,5 +83,5 @@ end
 
 post '/albums/:id' do
   Album.update(params)
-  redirect to '/albums/#{params[:id]}'
+  redirect to ('/albums')
 end

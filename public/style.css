@@ -11,16 +11,17 @@ nav {
 table {
   text-align: center;
   border-style: groove;
-  border-width: 10px;
-}
-
-tr {
-  font-family: 'Bungee', cursive;
+  border-width: 5px;
 }
 
 th {
   border-style: solid;
-  border-bottom-width: 10px;
+  border-bottom-width: 5px;
+}
+
+tr {
+  font-family: 'Bungee', cursive;
+  padding-top: 5px;
 }
 
 p {

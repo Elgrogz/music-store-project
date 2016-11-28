@@ -9,7 +9,7 @@
   <label>Artist:
     <select name="artist_id">
       <% for artist in @artists %>
-      <option <%= "selected" if artist.name == "#{artist.name}" %> value="<%= artist.id %>"><%= artist.name %></option> 
+      <option value="<%= artist.id %>"><%= artist.name %></option> 
       <% end %>
     </select>
   </label>
