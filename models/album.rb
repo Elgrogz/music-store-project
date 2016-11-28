@@ -21,7 +21,6 @@ class Album
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
-    check_quantity
   end
 
   def self.update(options)
@@ -31,7 +30,6 @@ class Album
           quantity = '#{options['quantity']}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
-    check_quantity
   end
 
   def self.find(id)
@@ -64,9 +62,7 @@ class Album
   end
 
   def check_quantity
-    if @quantity <= 0
-      @quantity == 0
-    elsif @quantity <= 10
+    if @quantity == nil || <= 10 
       return "low"
     elsif @quantity > 10 && @quantity < 20
       return "medium"
