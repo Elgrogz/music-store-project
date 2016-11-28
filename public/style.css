@@ -1,5 +1,6 @@
 body {
-  background-color: MediumAquamarine;
+  background-image: url("wave.jpg");
+  background-position: center;
   font-family: 'Bungee Shade', cursive;
 }
 
@@ -36,8 +37,14 @@ p {
   font-family: 'Bungee', cursive;
 }
 
-a {
 
+
+a:link {
+  color: white;
+}
+
+a:visited {
+  color: white;
 }
 
 #container {
