@@ -82,7 +82,7 @@ post '/albums' do
 end
 
 get 'albums/:id/delete' do
-  
+  erb(:delete)
 end
 
 get '/albums/:id/edit' do

@@ -5,6 +5,14 @@ body {
 
 nav {
   font-family: 'Bungee', cursive;
+  background-color: Coral;
+  border-radius: 100%;
+  padding-top: 200px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 5px;
 }
 
 table {
