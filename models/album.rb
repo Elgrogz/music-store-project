@@ -8,7 +8,7 @@ class Album
   def initialize(options)
     @id = nil || options['id'].to_i
     @title = options['title'] 
-    @genre = options['genre'] 
+    @genre = nil || options['genre'] 
     @quantity = nil || options['quantity'].to_i 
     @artist_id = options['artist_id'].to_i 
     @album_url = nil || options['album_url']
@@ -21,6 +21,7 @@ class Album
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
+    check_quantity
   end
 
   def self.update(options)
@@ -30,6 +31,7 @@ class Album
           quantity = '#{options['quantity']}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
+    check_quantity
   end
 
   def self.find(id)
@@ -59,6 +61,18 @@ class Album
     sql = "SELECT * FROM artists WHERE id = #{@artist_id}"
     result = SqlRunner.run(sql)
     return result[0]['name']
+  end
+
+  def check_quantity
+    if @quantity <= 0
+      @quantity == 0
+    elsif @quantity <= 10
+      return "low"
+    elsif @quantity > 10 && @quantity < 20
+      return "medium"
+    else
+      return "high"
+    end
   end
 
 end

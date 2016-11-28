@@ -15,6 +15,11 @@ get '/inventory' do
   erb(:inventory)
 end
 
+post '/inventory' do
+  @album = Album.update(params)
+  redirect to ('/inventory')
+end
+
 get '/artists' do
   @artists = Artist.all
   erb(:"artist/artists")
