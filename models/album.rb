@@ -62,7 +62,7 @@ class Album
   end
 
   def check_quantity
-    if @quantity == nil || <= 10 
+    if @quantity == nil || @quantity <= 10 
       return "low"
     elsif @quantity > 10 && @quantity < 20
       return "medium"

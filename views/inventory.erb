@@ -26,11 +26,7 @@
     <input type="submit" value="Add items"/>
 
     </form>
-
 </p>
-
-
-
 
 <table>
     <tr>
@@ -38,19 +34,18 @@
         <th>Album Name</th>
         <th>Genre</th>
         <th>Quantity</th>
-        <th>Options</th>
+        <th id="options">Options</th>
     </tr>
-        <% for album in @albums %>
-    <tr>
-        <td><%= album.get_name %></td>
-        <td><%= album.title %></td>
-        <td><%= album.genre %></td>
-        <td id=<%= album.check_quantity %>>
-        <%= album.quantity %>
-        </td>
-
-    </tr>
-        <% end %>
+        
+    <% for album in @albums %>
+        <tr>
+            <td><%= album.get_name %></td>
+            <td><%= album.title %></td>
+            <td><%= album.genre %></td>
+            <td id=<%= album.check_quantity %>>
+            <%= album.quantity %></td>
+        </tr>
+    <% end %>
 </table>
 
 

@@ -4,7 +4,6 @@ body {
 }
 
 nav {
-  float: left;
   font-family: 'Bungee', cursive;
 }
 
@@ -26,6 +25,14 @@ tr {
 
 p {
   font-family: 'Bungee', cursive;
+}
+
+#container {
+  display: flex;
+}
+
+#options {
+  width: 25%;
 }
 
 #low {

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div>
+<div id="container">
   <nav>
     <ul>
       <li><a href="/">Home</a></li>
@@ -19,8 +19,9 @@
     </ul>
   </nav>
 
-  <%= yield %>
-
+  <div id="main">
+    <%= yield %>
+  </div>
 </div>
 
 </body>
