@@ -27,8 +27,16 @@ p {
   font-family: 'Bungee', cursive;
 }
 
+h1 {
+  margin-left: 5%;
+}
+
 #container {
   display: flex;
+}
+
+#main {
+  padding-left: 3%;
 }
 
 #options {
