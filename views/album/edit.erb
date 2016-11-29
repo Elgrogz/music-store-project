@@ -1,28 +1,36 @@
 <h1>Edit Album</h1>
 
 <form action="/albums/<%= @album.id %>" method="post">
-  <label>
-    Album title:
-    <input type="text" name="title" value="<%= @album.title %>"/>
-  </label>
+  <p>
+    <label>
+      Album title:
+      <input type="text" name="title" value="<%= @album.title %>"/>
+    </label>
+  </p>
 
-  <label>Artist:
-    <select name="artist_id">
-      <% for artist in @artists %>
-      <option value="<%= artist.id %>"><%= artist.name %></option> 
-      <% end %>
-    </select>
-  </label>
+  <p>
+    <label>Artist:
+      <select name="artist_id">
+        <% for artist in @artists %>
+        <option value="<%= artist.id %>"><%= artist.name %></option> 
+        <% end %>
+      </select>
+    </label>
+  </p>
 
-  <label>
-    Album genre:
-    <input type="text" name="genre" value="<%= @album.genre %>"/>
-  </label>
+  <p>
+    <label>
+      Album genre:
+      <input type="text" name="genre" value="<%= @album.genre %>"/>
+    </label>
+  </p>
 
-  <label>
-    Quantity:
-    <input type="number" name="quantity" value="<%= @album.quantity %>"/>
-  </label>
+  <p>
+    <label>
+      Quantity:
+      <input type="number" name="quantity" value="<%= @album.quantity %>"/>
+    </label>
+  </p>
 
   <input type="submit" value="Edit Artist"/>
 
