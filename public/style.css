@@ -1,5 +1,7 @@
 body {
   background-image: url("wave.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   background-position: center;
   font-family: 'Bungee Shade', cursive;
 }

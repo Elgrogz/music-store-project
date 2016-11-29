@@ -44,7 +44,7 @@
             <td><%= album.genre %></td>
             <td id=<%= album.check_quantity %>>
             <%= album.quantity %></td>
-            <td><a href="/albums/<%= album.id %>/edit">Edit</a></td>
+            <td><a href="/albums/<%= album.id %>">Show</a>|<a href="/albums/<%= album.id %>/edit">Edit</a></td>
         </tr>
     <% end %>
 </table>
