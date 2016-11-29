@@ -12,8 +12,11 @@ end
 get '/inventory' do
   @albums = Album.all
   @artists = Artist.all
-  # @album = Album.find(params[:id])
   erb(:inventory)
+end
+
+get '/inventory/:id' do
+
 end
 
 get '/inventory/sort/artist' do
