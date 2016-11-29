@@ -1,5 +1,6 @@
 require('sinatra')
 require('sinatra/contrib/all')
+require('pry-byebug')
 require_relative('controllers/artist_controller')
 require_relative('controllers/album_controller')
 require_relative('models/artist')
@@ -15,8 +16,10 @@ get '/inventory' do
   erb(:inventory)
 end
 
-get '/inventory/:id' do
-
+post '/inventory/new_stock' do
+  @album = Album.find(params[:id])
+  @album.new_stock(params[:quantity].to_i)
+  redirect to ('/inventory')
 end
 
 get '/inventory/sort/artist' do

@@ -1,0 +1,20 @@
+<p>Add items to stock:
+    <form action="/inventory/new_stock" method="post">
+
+    <label>Album:
+      <select name="id">
+        <% for album in @albums %>
+        <option value="<%= album.id %>"><%= album.title %></option> 
+        <% end %>
+      </select>
+    </label>
+
+    <label>
+      Quantity to add:
+      <input type="number" name="quantity" />
+    </label>
+
+    <input type="submit" value="Add items"/>   
+
+    </form>
+</p>

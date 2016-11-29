@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Artist
 
-  attr_accessor :name
+  attr_accessor :name, :artist_url
   attr_reader :id
 
   def initialize(options)
@@ -13,8 +13,8 @@ class Artist
 
   def save
     sql = "INSERT INTO artists 
-          (name) 
-          VALUES ('#{@name}')
+          (name, artist_url) 
+          VALUES ('#{@name}', '#{@artist_url}')
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
@@ -22,7 +22,8 @@ class Artist
 
   def self.update(options)
     sql = "UPDATE artists 
-          SET name = '#{options['name']}'
+          SET name = '#{options['name']}',
+          artist_url = '#{options['artist_url']}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
   end

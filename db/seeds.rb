@@ -4,12 +4,14 @@ require_relative('../models/artist')
 require('pry-byebug')
 
 artist1 = Artist.new ({
-  'name' => 'Red Hot Chili Peppers'
+  'name' => 'Red Hot Chili Peppers',
+  'artist_url' => 'redhotchilipeppers.jpg'
   })
 artist1.save
 
 artist2 = Artist.new ({
-  'name' => 'Arctic Monkeys'
+  'name' => 'Arctic Monkeys',
+  'artist_url' => "arcticmonkeys.jpeg"
   })
 artist2.save
 
@@ -57,7 +59,7 @@ artist10.save
  #--------------------
 
 album1 = Album.new ({
-  'title' => "Blood Sugar Sex Magick",
+  'title' => "Blood Sugar Sex Magic",
   'genre' => 'Funk',
   'quantity' => 50,
   'artist_id' => artist1.id

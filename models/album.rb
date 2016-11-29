@@ -76,7 +76,7 @@ class Album
     @quantity += number
     sql = "UPDATE albums
           SET quantity = #{@quantity}
-          WHERE id = @id;"
+          WHERE id = #{@id};"
     result = SqlRunner.run(sql)
   end
 
