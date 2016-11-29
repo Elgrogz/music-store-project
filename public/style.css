@@ -20,7 +20,7 @@ ul {
 }
 
 table {
-  text-align: center;
+ /* text-align: center;*/
   border-style: groove;
   border-width: 5px;
 }
@@ -47,6 +47,16 @@ a:link {
 
 a:visited {
   color: white;
+}
+
+a:hover {
+  color: MediumAquamarine;
+}
+
+#jeff {
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
 }
 
 #container {

@@ -12,11 +12,17 @@ end
 get '/inventory' do
   @albums = Album.all
   @artists = Artist.all
+  # @album = Album.find(params[:id])
   erb(:inventory)
 end
 
-post '/inventory' do
-  @album = Album.update(params)
+get '/inventory/sort/artist' do
+  Album.sort_artist
+  redirect to ('/inventory')
+end
+
+get '/inventory/sort/genre' do
+  Album.sort_genre
   redirect to ('/inventory')
 end
 
@@ -31,6 +37,7 @@ end
 
 get '/artists/:id' do
   @artist = Artist.find(params[:id])
+  @albums = @artist.albums
   erb(:"artist/artist")
 end
 
@@ -93,6 +100,7 @@ get '/albums/:id/edit' do
 end
 
 post '/albums/:id' do
+  @album = Album.find(params[:id])
   Album.update(params)
   redirect to ('/inventory')
 end

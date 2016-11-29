@@ -72,4 +72,22 @@ class Album
     end
   end
 
+  def self.sort_artist
+    sql = "SELECT al.* FROM albums al
+          INNER JOIN artists ar
+          ON ar.id = al.artist_id
+          ORDER BY ar.name
+          DESC;"
+    result = SqlRunner.run(sql)
+    return result
+  end
+
+  def self.sort_genre
+    sql = "SELECT * FROM albums 
+          ORDER BY genre
+          DESC;"
+    result = SqlRunner.run(sql)
+    return result
+  end
+
 end
