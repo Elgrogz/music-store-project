@@ -36,7 +36,7 @@ end
 
 post '/artists/:id/delete' do
   Artist.destroy(params[:id])
-  redirect to ('/artists')
+  redirect to ('/inventory')
 end
   
 post '/artists' do
@@ -52,7 +52,7 @@ end
 
 post '/artists/:id' do
   Artist.update(params)
-  redirect to ('/artists')
+  redirect to ('/inventory')
 end
 
 get '/albums' do
@@ -77,7 +77,7 @@ end
 
 post '/albums/:id/delete' do
   Album.destroy(params[:id])
-  redirect to ('/albums')
+  redirect to ('/inventory')
 end
 
 post '/albums' do
@@ -94,5 +94,5 @@ end
 
 post '/albums/:id' do
   Album.update(params)
-  redirect to ('/albums')
+  redirect to ('/inventory')
 end
