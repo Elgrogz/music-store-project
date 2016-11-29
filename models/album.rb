@@ -74,20 +74,15 @@ class Album
 
   def new_stock(number)
     @quantity += number
-    sql = "UPDATE albums
+    sql1 = "UPDATE albums
           SET quantity = #{@quantity}
           WHERE id = #{@id};"
-    result = SqlRunner.run(sql)
+    result = SqlRunner.run(sql1)
   end
 
   def self.sort_artist
-    sql = "SELECT al.* FROM albums al
-          INNER JOIN artists ar
-          ON ar.id = al.artist_id
-          ORDER BY ar.name
-          DESC;"
-    result = SqlRunner.run(sql)
-    return result
+    
+    return result.map {|album| Album.new(album)}
   end
 
   def self.sort_genre

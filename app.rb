@@ -106,7 +106,7 @@ get '/albums/:id/edit' do
 end
 
 post '/albums/:id' do
-  @album = Album.find(params[:id])
+  # @album = Album.find(params[:id])
   Album.update(params)
   redirect to ('/inventory')
 end
