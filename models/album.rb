@@ -27,7 +27,8 @@ class Album
     sql = "UPDATE albums 
           SET title = '#{options['title']}',
           genre = '#{options['genre']}',
-          quantity = '#{options['quantity']}'
+          quantity = '#{options['quantity']}',
+          artist_id = '#{options['artist_id']}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
   end
