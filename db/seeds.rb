@@ -138,7 +138,6 @@ album8 = Album.new ({
   })
 album8.save
 
-
 album9 = Album.new ({
   'title' => "Beebz",
   'genre' => "Pop",
