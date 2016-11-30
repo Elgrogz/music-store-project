@@ -80,17 +80,4 @@ class Album
     result = SqlRunner.run(sql1)
   end
 
-  def self.sort_artist
-    
-    return result.map {|album| Album.new(album)}
-  end
-
-  def self.sort_genre
-    sql = "SELECT * FROM albums 
-          ORDER BY genre
-          DESC;"
-    result = SqlRunner.run(sql)
-    return result
-  end
-
 end
