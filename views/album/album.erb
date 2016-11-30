@@ -3,6 +3,8 @@
 <p>Artist: <a href="/artists/<%= @album.artist_id %>"><%= @album.get_name %></a></p>
 <p>Genre: <%= @album.genre %></p>
 <p>Quantity in stock: <%= @album.quantity %></p>
+<p>Buy Price: <%= @album.buy_price %></p>
+<p>Sell Price: <%= @album.sell_price %></p>
 
 <form action="/albums/<%= @album.id %>/edit" method="get">
   <input type="submit" value="Edit Album">

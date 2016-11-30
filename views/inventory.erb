@@ -60,7 +60,7 @@
       <td><%= album.title %></td>
       <td><%= album.genre %></td>
       <td id=<%= album.check_quantity %>><%= album.quantity %></td>
-      <td><%= album.price %></td>
+      <td>£<%= album.markup %></td>
       <td><a href="/albums/<%= album.id %>">Show</a>|<a href="/albums/<%= album.id %>/edit">Edit</a>|<a href="/albums/<%= album.id %>/delete">Delete</a></td>
     </tr>
   <% end %>

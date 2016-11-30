@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_accessor :title, :genre, :quantity, :album_url, :price
+  attr_accessor :title, :genre, :quantity, :album_url, :buy_price, :sell_price
   attr_reader :id, :artist_id
 
   def initialize(options)
@@ -12,13 +12,14 @@ class Album
     @quantity = nil || options['quantity'].to_i 
     @artist_id = options['artist_id'].to_i 
     @album_url = nil || options['album_url']
-    @price = nil || options['price'].to_i
+    @buy_price = 3 || options['buy_price'].to_i
+    @sell_price = 10 || options['sell_price'].to_i
   end
 
   def save
     sql = "INSERT INTO albums 
-          (title, genre, quantity, artist_id, price) 
-          VALUES ('#{@title}', '#{@genre}', #{@quantity}, #{@artist_id}, #{@price})
+          (title, genre, quantity, artist_id, buy_price, sell_price) 
+          VALUES ('#{@title}', '#{@genre}', #{@quantity}, #{@artist_id}, #{@buy_price}, #{@sell_price})
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
@@ -30,7 +31,8 @@ class Album
           genre = '#{options['genre']}',
           quantity = '#{options['quantity']}',
           artist_id = '#{options['artist_id']}'
-          price = '#{options[price]}'
+          buy_price = '#{options[buy_price]}'
+          sell_price = '#{options[sell_price]}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
   end
@@ -92,5 +94,7 @@ class Album
           WHERE id = #{@id};"
     result = SqlRunner.run(sql)
   end
+
+  
 
 end
