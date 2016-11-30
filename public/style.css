@@ -3,15 +3,19 @@ body {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Bungee', cursive;
 }
 
 nav {
-  font-family: 'Bungee', cursive;
+  font-family: 'Bungee Shade', cursive;
   background-color: Coral;
   border-radius: 100%;
   padding-top: 200px;
   height: 333px;
+}
+
+h1, h3 {
+  font-family: 'Bungee Shade', cursive;
 }
 
 ul {
@@ -20,7 +24,6 @@ ul {
 }
 
 table {
- /* text-align: center;*/
   border-style: groove;
   border-width: 5px;
 }
@@ -31,15 +34,8 @@ th {
 }
 
 tr {
-  font-family: 'Bungee', cursive;
   padding-top: 5px;
 }
-
-p {
-  font-family: 'Bungee', cursive;
-}
-
-
 
 a:link {
   color: white;

@@ -1,9 +1,10 @@
 <h1>Inventory</h1>
 
-<p>Add items to stock:
+<h3>Add items to stock:
     <form action="/inventory/new_stock" method="post">
 
-    <label>Album:
+    <label>
+        Album:
       <select name="id">
         <% for album in @albums %>
         <option value="<%= album.id %>"><%= album.title %></option> 
@@ -19,9 +20,10 @@
     <input type="submit" value="Add items"/>   
 
     </form>
-</p>
+    
+</h3>
 
-<p>Remove items from stock:
+<h3>Remove items from stock:
     <form action="/inventory/remove_stock" method="post">
 
     <label>Album:
@@ -40,7 +42,7 @@
     <input type="submit" value="Remove items"/>   
 
     </form>
-</p>
+</h3>
 
 <table>
     <tr>
