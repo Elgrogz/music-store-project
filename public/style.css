@@ -6,9 +6,21 @@ body {
   font-family: 'Bungee', cursive;
 }
 
+header {
+  width: 100%;
+  height: 15%;
+  background-color: MediumAquamarine;
+  font-family: 'Bungee Outline';
+  font-size: 30px;
+  text-align: right;  
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
 nav {
   font-family: 'Bungee Shade', cursive;
   background-color: Coral;
+  border: solid 10px LightSeaGreen;
   border-radius: 100%;
   padding-top: 200px;
   height: 333px;
@@ -52,7 +64,8 @@ a:hover {
 #jeff {
   width: 50%;
   height: 50%;
-  position: center;
+  display: block;
+  text-align: center; 
   border-radius: 50%;
 }
 
@@ -65,7 +78,7 @@ a:hover {
 }
 
 #key {
-  background-color: MediumAquamarine;
+  background-color: LightSeaGreen;
   width: 22%;
   border: solid 2px;
   margin-top: 10px;
