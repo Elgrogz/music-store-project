@@ -1,21 +1,21 @@
 <h1>Inventory</h1>
 
 <h3>Add items to stock:</h3>
-  <form action="/inventory/new_stock" method="post">
 
   <p>
+   <form action="/inventory/new_stock" method="post">
     <label>
       Album:
-        <select name="id">
-          <% for album in @albums %>
-            <option value="<%= album.id %>"><%= album.title %></option> 
-          <% end %>
-        </select>
+      <select name="id">
+        <% for album in @albums %>
+          <option value="<%= album.id %>"><%= album.title %></option> 
+        <% end %>
+      </select>
     </label>
 
     <label>
       Quantity to add:
-        <input type="number" name="quantity" />
+      <input type="number" name="quantity" />
     </label>
 
     <input type="submit" value="Add items"/>   
