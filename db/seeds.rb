@@ -29,7 +29,7 @@ artist4.save
 
 artist5 = Artist.new({
   'name' => 'Justin Bieber',
-  'artist_url' => '/justinbieber.jpeg'
+  'artist_url' => '/justin.jpg'
   })
 artist5.save
 

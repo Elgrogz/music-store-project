@@ -18,8 +18,8 @@ class Album
 
   def save
     sql = "INSERT INTO albums 
-          (title, genre, quantity, artist_id, buy_price, sell_price) 
-          VALUES ('#{@title}', '#{@genre}', #{@quantity}, #{@artist_id}, #{@buy_price}, #{@sell_price})
+          (title, genre, quantity, artist_id, album_url, buy_price, sell_price) 
+          VALUES ('#{@title}', '#{@genre}', #{@quantity}, #{@artist_id}, '#{@album_url}', #{@buy_price}, #{@sell_price})
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
@@ -30,8 +30,9 @@ class Album
           SET title = '#{options['title']}',
           genre = '#{options['genre']}',
           quantity = '#{options['quantity']}',
-          artist_id = '#{options['artist_id']}'
-          buy_price = '#{options[buy_price]}'
+          artist_id = '#{options['artist_id']}',
+          album_url = '#{options['album_url']}',
+          buy_price = '#{options[buy_price]}',
           sell_price = '#{options[sell_price]}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
