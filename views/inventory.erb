@@ -23,20 +23,13 @@
 
 <table>
     <tr>
-        <th><a href="/inventory/sort/artist">Artist Name</a></th>
+        <th>Artist Name</a></th>
         <th>Album Name</th>
-        <th><a href="/inventory/sort/genre">Genre</th>
+        <th>Genre</th>
         <th>Quantity</th>
-        <th id="options">Options</th>
+        <th>Options</th>
     </tr>
 
- <!--    <tr>
-        <td><a href="">Sort</a></td>
-        <td><a href="">Sort</a></td>
-        <td><a href="">Sort</a></td>
-        <td><a href="">Sort</a></td>
-    </tr>    --> 
-        
     <% for album in @albums %>
         <tr>
             <td><%= album.get_name %></td>

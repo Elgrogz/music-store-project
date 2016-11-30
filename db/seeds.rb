@@ -5,53 +5,61 @@ require('pry-byebug')
 
 artist1 = Artist.new ({
   'name' => 'Red Hot Chili Peppers',
-  'artist_url' => 'redhotchilipeppers.jpg'
+  'artist_url' => '/redhotchilipeppers.jpg'
   })
 artist1.save
 
 artist2 = Artist.new ({
   'name' => 'Arctic Monkeys',
-  'artist_url' => "arcticmonkeys.jpeg"
+  'artist_url' => '/arcticmonkeys.jpeg'
   })
 artist2.save
 
 artist3 = Artist.new({
-  'name' => 'Chance the Rapper'
+  'name' => 'Chance the Rapper',
+  'artist_url' => '/chance.jpeg'
   })
 artist3.save
 
 artist4 = Artist.new({
-  'name' => 'Kendrick Lamar'
+  'name' => 'Kendrick Lamar',
+  'artist_url' => '/kendrick.jpeg'
   })
 artist4.save
 
 artist5 = Artist.new({
-  'name' => 'Justin Bieber'
+  'name' => 'Justin Bieber',
+  'artist_url' => '/justinbieber.jpeg'
   })
 artist5.save
 
 artist6 = Artist.new({
-  'name' => 'One Direction'
+  'name' => 'One Direction',
+  'artist_url' => '/onedirection.jpeg'
   })
 artist6.save
 
 artist7 = Artist.new({
-  'name' => 'Pantera'
+  'name' => 'Pantera',
+  'artist_url' => '/pantera.jpeg'
   })
 artist7.save
 
 artist8 = Artist.new({
-  'name' => 'Metallica'
+  'name' => 'Metallica',
+  'artist_url' => '/metallica.jpeg'
   })
 artist8.save
 
 artist9 = Artist.new({
-  'name' => 'Bob Marley'
+  'name' => 'Bob Marley',
+  'artist_url' => '/bobmarley.jpeg'
   })
 artist9.save
 
 artist10 = Artist.new({
-  'name' => 'Cliff Richard'
+  'name' => 'Cliff Richard',
+  'artist_url' => '/cliff.jpeg'
   })
 artist10.save
 
