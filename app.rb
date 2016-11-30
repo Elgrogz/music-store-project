@@ -5,8 +5,10 @@ require_relative('controllers/artist_controller')
 require_relative('controllers/album_controller')
 require_relative('models/artist')
 require_relative('models/album')
+require_relative('models/jeff')
 
 get '/' do
+ @jeff = Jeff.all
  erb(:index)
 end
 

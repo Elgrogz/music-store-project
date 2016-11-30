@@ -9,7 +9,7 @@ class Jeff
             "Life's a beach!",
             "Sooo stoked!",
             "Fin, noggin', duuuuude!",
-            "Come surf in my turf!"]
+            "Come surf in my turf!",
+            "Don't steal my wave dude!"]
   end
-
 end
