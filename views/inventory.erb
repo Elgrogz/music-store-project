@@ -1,30 +1,28 @@
 <h1>Inventory</h1>
 
 <h3>Add items to stock:
-    <form action="/inventory/new_stock" method="post">
+  <form action="/inventory/new_stock" method="post">
 
     <label>
-        Album:
-      <select name="id">
-        <% for album in @albums %>
-        <option value="<%= album.id %>"><%= album.title %></option> 
-        <% end %>
-      </select>
+      Album:
+        <select name="id">
+          <% for album in @albums %>
+            <option value="<%= album.id %>"><%= album.title %></option> 
+          <% end %>
+        </select>
     </label>
 
     <label>
       Quantity to add:
-      <input type="number" name="quantity" />
+        <input type="number" name="quantity" />
     </label>
 
     <input type="submit" value="Add items"/>   
-
-    </form>
-    
+  </form>
 </h3>
 
 <h3>Remove items from stock:
-    <form action="/inventory/remove_stock" method="post">
+  <form action="/inventory/remove_stock" method="post">
 
     <label>Album:
       <select name="id">
@@ -40,29 +38,28 @@
     </label>
 
     <input type="submit" value="Remove items"/>   
-
-    </form>
+  </form>
 </h3>
 
 <table>
-    <tr>
-        <th>Artist Name</a></th>
-        <th>Album Name</th>
-        <th>Genre</th>
-        <th>Quantity</th>
-        <th>Options</th>
-    </tr>
+  <tr>
+    <th>Artist Name</a></th>
+    <th>Album Name</th>
+    <th>Genre</th>
+    <th>Quantity</th>
+    <th>Options</th>
+  </tr>
 
-    <% for album in @albums %>
-        <tr>
-            <td><%= album.get_name %></td>
-            <td><%= album.title %></td>
-            <td><%= album.genre %></td>
-            <td id=<%= album.check_quantity %>>
-            <%= album.quantity %></td>
-            <td><a href="/albums/<%= album.id %>">Show</a>|<a href="/albums/<%= album.id %>/edit">Edit</a>|<a href="/albums/<%= album.id %>/delete">Delete</a></td>
-        </tr>
-    <% end %>
+  <% for album in @albums %>
+    <tr>
+      <td><%= album.get_name %></td>
+      <td><%= album.title %></td>
+      <td><%= album.genre %></td>
+      <td id=<%= album.check_quantity %>>
+        <%= album.quantity %></td>
+        <td><a href="/albums/<%= album.id %>">Show</a>|<a href="/albums/<%= album.id %>/edit">Edit</a>|<a href="/albums/<%= album.id %>/delete">Delete</a></td>
+    </tr>
+  <% end %>
 </table>
 
 

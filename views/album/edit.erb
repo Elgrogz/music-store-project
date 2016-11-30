@@ -3,7 +3,7 @@
 <form action="/albums/<%= @album.id %>" method="post">
   <p>
     <label>
-      Album title:
+      Title:
       <input type="text" name="title" value="<%= @album.title %>"/>
     </label>
   </p>
@@ -20,18 +20,18 @@
 
   <p>
     <label>
-      Album genre:
-      <input type="text" name="genre" value="<%= @album.genre %>"/>
-    </label>
-  </p>
+     Genre:
+     <input type="text" name="genre" value="<%= @album.genre %>"/>
+   </label>
+ </p>
 
-  <p>
-    <label>
-      Quantity:
-      <input type="number" name="quantity" value="<%= @album.quantity %>"/>
-    </label>
-  </p>
+ <p>
+  <label>
+    Quantity:
+    <input type="number" name="quantity" value="<%= @album.quantity %>"/>
+  </label>
+</p>
 
-  <input type="submit" value="Edit Artist"/>
+<input type="submit" value="Edit Artist"/>
 
 </form>

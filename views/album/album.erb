@@ -1,8 +1,8 @@
 <h1>Album View</h1>
-<p>Album title: <%= @album.title %></p>
-<p>Album artist: <a href="/artists/<%= @album.artist_id %>"><%= @album.get_name %></a></p>
-<p>Album genre: <%= @album.genre %></p>
-<p>Album quantity: <%= @album.quantity %></p>
+<p>Title: <%= @album.title %></p>
+<p>Artist: <a href="/artists/<%= @album.artist_id %>"><%= @album.get_name %></a></p>
+<p>Genre: <%= @album.genre %></p>
+<p>Quantity in stock: <%= @album.quantity %></p>
 
 <form action="/albums/<%= @album.id %>/edit" method="get">
   <input type="submit" value="Edit Album">
