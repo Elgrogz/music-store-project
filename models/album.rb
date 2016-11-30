@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_accessor :title, :genre, :quantity, :album_url, :buy_price, :sell_price
+  attr_accessor :title, :genre, :quantity, :album_url, :buy_price, :sell_price, :markup
   attr_reader :id, :artist_id
 
   def initialize(options)
@@ -12,8 +12,9 @@ class Album
     @quantity = nil || options['quantity'].to_i 
     @artist_id = options['artist_id'].to_i 
     @album_url = nil || options['album_url']
-    @buy_price = 3 || options['buy_price'].to_i
-    @sell_price = 10 || options['sell_price'].to_i
+    @buy_price = nil || options['buy_price'].to_i
+    @sell_price = nil || options['sell_price'].to_i
+    @markup = @sell_price - @buy_price
   end
 
   def save
@@ -94,10 +95,6 @@ class Album
           SET quantity = #{@quantity}
           WHERE id = #{@id};"
     result = SqlRunner.run(sql)
-  end
-
-  def markup
-    return @sell_price - @buy_price
   end
 
 end

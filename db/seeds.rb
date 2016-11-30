@@ -71,7 +71,9 @@ album1 = Album.new ({
   'genre' => 'Funk',
   'quantity' => 50,
   'artist_id' => artist1.id,
-  'album_url' => '/bloodsugar.jpeg'
+  'album_url' => '/bloodsugar.jpeg',
+  'buy_price' => 3,
+  'sell_price' => 5
   })
 album1.save
 
@@ -80,7 +82,9 @@ album2 = Album.new ({
   'genre' => 'Funk',
   'quantity' => 0,
   'artist_id' => artist1.id,
-  'album_url' => '/californication.jpeg'
+  'album_url' => '/californication.jpeg',
+  'buy_price' => 4,
+  'sell_price' => 7
   })
 album2.save
 
