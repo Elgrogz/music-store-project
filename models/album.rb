@@ -2,7 +2,7 @@ require_relative('../db/sql_runner')
 
 class Album
 
-  attr_accessor :title, :genre, :quantity, :album_url
+  attr_accessor :title, :genre, :quantity, :album_url, :price
   attr_reader :id, :artist_id
 
   def initialize(options)
@@ -12,12 +12,13 @@ class Album
     @quantity = nil || options['quantity'].to_i 
     @artist_id = options['artist_id'].to_i 
     @album_url = nil || options['album_url']
+    @price = nil || options['price'].to_i
   end
 
   def save
     sql = "INSERT INTO albums 
-          (title, genre, quantity, artist_id) 
-          VALUES ('#{@title}', '#{@genre}', #{@quantity}, #{@artist_id})
+          (title, genre, quantity, artist_id, price) 
+          VALUES ('#{@title}', '#{@genre}', #{@quantity}, #{@artist_id}, #{@price})
           RETURNING *;"
     results = SqlRunner.run(sql)
     @id = results[0]['id'].to_i
@@ -29,6 +30,7 @@ class Album
           genre = '#{options['genre']}',
           quantity = '#{options['quantity']}',
           artist_id = '#{options['artist_id']}'
+          price = '#{options[price]}'
           WHERE id = '#{options['id']}';"
     result = SqlRunner.run(sql)
   end
@@ -63,7 +65,10 @@ class Album
   end
 
   def check_quantity
-    if @quantity == nil || @quantity <= 10 
+    if @quantity <= 0 || @quantity == nil
+      @quantity = 0
+      return "low"
+    elsif @quantity > 0 && @quantity <= 10 
       return "low"
     elsif @quantity > 10 && @quantity < 20
       return "medium"

@@ -13,6 +13,7 @@ CREATE TABLE albums (
   genre VARCHAR(255),
   quantity INT4,
   artist_id INT8 references artists(id) ON DELETE CASCADE,
-  album_url TEXT
+  album_url TEXT,
+  price INT4
 );
 
