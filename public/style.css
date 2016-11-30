@@ -9,7 +9,7 @@ body {
 header {
   width: 100%;
   height: 15%;
-  background-color: MediumAquamarine;
+  background-color: DodgerBlue;
   font-family: 'Bungee Outline';
   font-size: 30px;
   text-align: right;  
@@ -36,13 +36,22 @@ ul {
 }
 
 table {
-  border-style: solid;
-  border-width: 2px;
+/*  border-style: solid;
+  border-color: DodgerBlue;
+  border-radius: 5px;
+  border-width: 2px;*/
 }
 
 th {
   border-style: solid;
+  border-color: DodgerBlue;
   border-bottom-width: 5px;
+}
+
+td {
+  border-style: solid;
+  border-color: DodgerBlue;
+  border-width: 0px 0px 1px 0px;
 }
 
 tr {
@@ -81,6 +90,7 @@ a:hover {
   background-color: LightSeaGreen;
   width: 22%;
   border: solid 2px;
+  border-color: DodgerBlue;;
   margin-top: 10px;
 }
 
