@@ -1,8 +1,8 @@
 <h1>Artist List</h1>
 <h2><a href="/artists/new">Add new artist</a></h2>
 <% for artist in @artists %>
-<p>Artist name: <%= artist.name %> |
-<a href="/artists/<%= artist.id %>">Show artist</a>
+<p><%= artist.name %> |
+  <a href="/artists/<%= artist.id %>">Show artist</a>
 </p>
 <% end %>
 

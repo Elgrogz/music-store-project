@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:4567/inventory -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Jeff 3's Music Shop</title>
+
+  <link href="./Jeff 3&#39;s Music Shop_files/css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./Jeff 3&#39;s Music Shop_files/style.css">
+
+</head>
+<body>
+
+<div id="container">
+  <nav>
+    <ul>
+      <li><a href="http://localhost:4567/">Home</a></li>
+      <li><a href="http://localhost:4567/inventory">Inventory</a></li>
+      <li><a href="http://localhost:4567/artists">Artists</a></li>
+      <li><a href="http://localhost:4567/albums">Albums</a></li>
+    </ul>
+  </nav>
+
+  <div id="main">
+    <h1>Inventory</h1>
+
+<h3>Add items to stock:</h3>
+  <form action="http://localhost:4567/inventory/new_stock" method="post">
+
+  <p>
+    <label>
+      Album:
+        <select name="id">
+          
+            <option value="5">Acid Rap</option> 
+          
+            <option value="8">Good Kid, Maad City</option> 
+          
+            <option value="9">Beebz</option> 
+          
+            <option value="10">1d</option> 
+          
+            <option value="11">Cowboys from Hell</option> 
+          
+            <option value="12">Ride the Lighting</option> 
+          
+            <option value="13">Master of Puppets</option> 
+          
+            <option value="14">Exodus</option> 
+          
+            <option value="15">Cliff</option> 
+          
+            <option value="1">Blood Sugar Sex Magic</option> 
+          
+            <option value="3">Whatever people say I am thats what Im not</option> 
+          
+            <option value="2">Californication</option> 
+          
+            <option value="6">Coloring Book</option> 
+          
+            <option value="4">A.M.</option> 
+          
+            <option value="7">To Pimp a Butterfly</option> 
+          
+        </select>
+    </label>
+
+    <label>
+      Quantity to add:
+        <input type="number" name="quantity">
+    </label>
+
+    <input type="submit" value="Add items">   
+  </p></form>
+  <p></p>
+
+<h3>Remove items from stock:</h3>
+  <form action="http://localhost:4567/inventory/remove_stock" method="post">
+
+  <p>
+    <label>Album:
+      <select name="id">
+        
+        <option value="5">Acid Rap</option> 
+        
+        <option value="8">Good Kid, Maad City</option> 
+        
+        <option value="9">Beebz</option> 
+        
+        <option value="10">1d</option> 
+        
+        <option value="11">Cowboys from Hell</option> 
+        
+        <option value="12">Ride the Lighting</option> 
+        
+        <option value="13">Master of Puppets</option> 
+        
+        <option value="14">Exodus</option> 
+        
+        <option value="15">Cliff</option> 
+        
+        <option value="1">Blood Sugar Sex Magic</option> 
+        
+        <option value="3">Whatever people say I am thats what Im not</option> 
+        
+        <option value="2">Californication</option> 
+        
+        <option value="6">Coloring Book</option> 
+        
+        <option value="4">A.M.</option> 
+        
+        <option value="7">To Pimp a Butterfly</option> 
+        
+      </select>
+    </label>
+
+    <label>
+      Quantity to remove:
+      <input type="number" name="quantity">
+    </label>
+
+    <input type="submit" value="Remove items">   
+  </p></form>
+  <p></p>
+
+
+<table>
+  <tbody><tr>
+    <th>Artist Name</th>
+    <th>Album Name</th>
+    <th>Genre</th>
+    <th>Quantity</th>
+    <th>Markup</th>
+    <th>Options</th>
+  </tr>
+
+  
+    <tr>
+      <td>Chance the Rapper</td>
+      <td>Acid Rap</td>
+      <td>Rap</td>
+      <td class="high">20</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/5">Show</a>|<a href="http://localhost:4567/albums/5/edit">Edit</a>|<a href="http://localhost:4567/albums/5/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Kendrick Lamar</td>
+      <td>Good Kid, Maad City</td>
+      <td>Rap</td>
+      <td class="low">9</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/8">Show</a>|<a href="http://localhost:4567/albums/8/edit">Edit</a>|<a href="http://localhost:4567/albums/8/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Justin Bieber</td>
+      <td>Beebz</td>
+      <td>Pop</td>
+      <td class="medium">15</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/9">Show</a>|<a href="http://localhost:4567/albums/9/edit">Edit</a>|<a href="http://localhost:4567/albums/9/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>One Direction</td>
+      <td>1d</td>
+      <td>Pop</td>
+      <td class="high">20</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/10">Show</a>|<a href="http://localhost:4567/albums/10/edit">Edit</a>|<a href="http://localhost:4567/albums/10/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Pantera</td>
+      <td>Cowboys from Hell</td>
+      <td>Metal</td>
+      <td class="low">10</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/11">Show</a>|<a href="http://localhost:4567/albums/11/edit">Edit</a>|<a href="http://localhost:4567/albums/11/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Metallica</td>
+      <td>Ride the Lighting</td>
+      <td>Metal</td>
+      <td class="high">50</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/12">Show</a>|<a href="http://localhost:4567/albums/12/edit">Edit</a>|<a href="http://localhost:4567/albums/12/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Metallica</td>
+      <td>Master of Puppets</td>
+      <td>Metal</td>
+      <td class="low">1</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/13">Show</a>|<a href="http://localhost:4567/albums/13/edit">Edit</a>|<a href="http://localhost:4567/albums/13/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Bob Marley</td>
+      <td>Exodus</td>
+      <td>Reggae</td>
+      <td class="medium">18</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/14">Show</a>|<a href="http://localhost:4567/albums/14/edit">Edit</a>|<a href="http://localhost:4567/albums/14/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Cliff Richard</td>
+      <td>Cliff</td>
+      <td>Golden Oldies</td>
+      <td class="high">50</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/15">Show</a>|<a href="http://localhost:4567/albums/15/edit">Edit</a>|<a href="http://localhost:4567/albums/15/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Red Hot Chili Peppers</td>
+      <td>Blood Sugar Sex Magic</td>
+      <td>Funk</td>
+      <td class="out_of_stock">0</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/1">Show</a>|<a href="http://localhost:4567/albums/1/edit">Edit</a>|<a href="http://localhost:4567/albums/1/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Arctic Monkeys</td>
+      <td>Whatever people say I am thats what Im not</td>
+      <td>Indie</td>
+      <td class="high">22</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/3">Show</a>|<a href="http://localhost:4567/albums/3/edit">Edit</a>|<a href="http://localhost:4567/albums/3/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Red Hot Chili Peppers</td>
+      <td>Californication</td>
+      <td>Funk</td>
+      <td class="out_of_stock">0</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/2">Show</a>|<a href="http://localhost:4567/albums/2/edit">Edit</a>|<a href="http://localhost:4567/albums/2/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Chance the Rapper</td>
+      <td>Coloring Book</td>
+      <td>Rap</td>
+      <td class="low">5</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/6">Show</a>|<a href="http://localhost:4567/albums/6/edit">Edit</a>|<a href="http://localhost:4567/albums/6/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Kendrick Lamar</td>
+      <td>A.M.</td>
+      <td>Indie</td>
+      <td class="out_of_stock">0</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/4">Show</a>|<a href="http://localhost:4567/albums/4/edit">Edit</a>|<a href="http://localhost:4567/albums/4/delete">Delete</a></td>
+    </tr>
+  
+    <tr>
+      <td>Kendrick Lamar</td>
+      <td>To Pimp a Butterfly</td>
+      <td>Rap</td>
+      <td class="low">5</td>
+      <td>£7</td>
+      <td><a href="http://localhost:4567/albums/7">Show</a>|<a href="http://localhost:4567/albums/7/edit">Edit</a>|<a href="http://localhost:4567/albums/7/delete">Delete</a></td>
+    </tr>
+  
+</tbody></table>
+
+<div class="key">
+<p>Quantity Key:</p> 
+<p class="high">Green = stock level high</p>
+<p class="medium">Yellow = stock level medium</p>
+<p class="low">Orange= stock level low</p>
+<span class="out_of_stock">Red</span> = out of stock<p></p>
+</div>
+
+
+
+  </div>
+</div>
+
+
+</body></html>

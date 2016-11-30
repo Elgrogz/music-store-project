@@ -50,7 +50,7 @@
     <th>Album Name</th>
     <th>Genre</th>
     <th>Quantity</th>
-    <th>Price</th>
+    <th>Markup</th>
     <th>Options</th>
   </tr>
 
@@ -59,11 +59,19 @@
       <td><%= album.get_name %></td>
       <td><%= album.title %></td>
       <td><%= album.genre %></td>
-      <td id=<%= album.check_quantity %>><%= album.quantity %></td>
+      <td class=<%= album.check_quantity %>><%= album.quantity %></td>
       <td>£<%= album.markup %></td>
       <td><a href="/albums/<%= album.id %>">Show</a>|<a href="/albums/<%= album.id %>/edit">Edit</a>|<a href="/albums/<%= album.id %>/delete">Delete</a></td>
     </tr>
   <% end %>
 </table>
+
+<div id="key">
+<p>Quantity Key:</p> 
+<p class="high">Green = stock level high</p>
+<p class="medium">Yellow = stock level medium</p>
+<p class="low">Orange = stock level low</p>
+<p class="out_of_stock">Red = out of stock</p>
+</div>
 
 

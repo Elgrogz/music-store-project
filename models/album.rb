@@ -69,7 +69,7 @@ class Album
   def check_quantity
     if @quantity <= 0 || @quantity == nil
       @quantity = 0
-      return "low"
+      return "out_of_stock"
     elsif @quantity > 0 && @quantity <= 10 
       return "low"
     elsif @quantity > 10 && @quantity < 20
@@ -95,6 +95,8 @@ class Album
     result = SqlRunner.run(sql)
   end
 
-  
+  def markup
+    return @sell_price - @buy_price
+  end
 
 end
