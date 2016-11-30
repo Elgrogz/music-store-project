@@ -21,6 +21,27 @@
     </form>
 </p>
 
+<p>Remove items from stock:
+    <form action="/inventory/remove_stock" method="post">
+
+    <label>Album:
+      <select name="id">
+        <% for album in @albums %>
+        <option value="<%= album.id %>"><%= album.title %></option> 
+        <% end %>
+      </select>
+    </label>
+
+    <label>
+      Quantity to remove:
+      <input type="number" name="quantity" />
+    </label>
+
+    <input type="submit" value="Remove items"/>   
+
+    </form>
+</p>
+
 <table>
     <tr>
         <th>Artist Name</a></th>

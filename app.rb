@@ -22,13 +22,9 @@ post '/inventory/new_stock' do
   redirect to ('/inventory')
 end
 
-get '/inventory/sort/artist' do
-  Album.sort_artist
-  redirect to ('/inventory')
-end
-
-get '/inventory/sort/genre' do
-  Album.sort_genre
+post '/inventory/remove_stock' do
+  @album = Album.find(params[:id])
+  @album.remove_stock(params[:quantity].to_i)
   redirect to ('/inventory')
 end
 

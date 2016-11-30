@@ -74,10 +74,18 @@ class Album
 
   def new_stock(number)
     @quantity += number
-    sql1 = "UPDATE albums
+    sql = "UPDATE albums
           SET quantity = #{@quantity}
           WHERE id = #{@id};"
-    result = SqlRunner.run(sql1)
+    result = SqlRunner.run(sql)
+  end
+
+  def remove_stock(number)
+    @quantity -= number
+    sql = "UPDATE albums
+          SET quantity = #{@quantity}
+          WHERE id = #{@id};"
+    result = SqlRunner.run(sql)
   end
 
 end
