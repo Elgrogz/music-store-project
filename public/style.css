@@ -44,7 +44,7 @@ table {
 th {
   border-style: solid;
   border-color: LightSeaGreen;
-  border-bottom-width: 5px;
+  border-width: 0px 0px 5px 0px;
 }
 
 td {
@@ -91,6 +91,7 @@ a:hover {
   border: solid 2px;
   border-color: DodgerBlue;;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 #options {
@@ -111,4 +112,12 @@ a:hover {
 
 .high {
   color: green;
+}
+
+.individual_view {
+  display: flex;
+}
+
+.info {
+  margin-right: 15px;
 }

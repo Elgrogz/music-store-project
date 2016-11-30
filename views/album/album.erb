@@ -1,15 +1,22 @@
 <h1>Album View</h1>
-<p>Title: <%= @album.title %></p>
-<p>Artist: <a href="/artists/<%= @album.artist_id %>"><%= @album.get_name %></a></p>
-<p>Genre: <%= @album.genre %></p>
-<p>Quantity in stock: <%= @album.quantity %></p>
-<p>Buy Price: <%= @album.buy_price %></p>
-<p>Sell Price: <%= @album.sell_price %></p>
 
-<form action="/albums/<%= @album.id %>/edit" method="get">
-  <input type="submit" value="Edit Album">
-</form>
+<div class="individual_view">
+<div class="info">
+    <p>Title: <%= @album.title %></p>
+    <p>Artist: <a href="/artists/<%= @album.artist_id %>"><%= @album.get_name %></a></p>
+    <p>Genre: <%= @album.genre %></p>
+    <p>Quantity in stock: <%= @album.quantity %></p>
+    <p>Buy Price: <%= @album.buy_price %></p>
+    <p>Sell Price: <%= @album.sell_price %></p>
 
-<form action="/albums/<%= @album.id %>/delete" method="post">
-  <input type="submit" value="Delete Album">
-</form>
+
+    <form action="/albums/<%= @album.id %>/edit" method="get">
+      <input type="submit" value="Edit Album">
+    </form>
+
+    <form action="/albums/<%= @album.id %>/delete" method="post">
+      <input type="submit" value="Delete Album">
+    </form>
+  </div>
+    <img src="<%= @album.album_url %>">
+</div>
