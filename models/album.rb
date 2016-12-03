@@ -97,4 +97,12 @@ class Album
     result = SqlRunner.run(sql)
   end
 
+  def self.sort_genre(album_id)
+    sql = "SELECT * FROM albums
+          WHERE id = #{album_id}
+          ORDER BY genre;"
+    results = SqlRunner.run(sql)
+    return results.map {|result| Album.new(result)}
+  end
+
 end

@@ -18,6 +18,11 @@ get '/inventory' do
   erb(:inventory)
 end
 
+get '/inventory/sortgenre' do
+  Album.sort_genre(params[:id])
+  redirect to ('/inventory')
+end
+
 post '/inventory/new_stock' do
   @album = Album.find(params[:id])
   @album.new_stock(params[:quantity].to_i)
